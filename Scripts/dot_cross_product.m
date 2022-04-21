@@ -7,7 +7,7 @@ function []=dot_cross_product
 end
 
 function [A,B]=fillarrays
-n=input("enter how many columns");
+n=input("Enter how many columns");
 A=zeros(1,n);
 B=zeros(1,n);
     for i=1:1:n

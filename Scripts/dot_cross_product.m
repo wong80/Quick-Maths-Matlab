@@ -1,3 +1,4 @@
+%main function
 function []=dot_cross_product
     [A,B]=fillarrays;
     C=dotproduct(A,B);
@@ -5,9 +6,9 @@ function []=dot_cross_product
     disp(C)
     disp(D)
 end
-
+%function to input data into their arrays
 function [A,B]=fillarrays
-n=input("Enter how many columns");
+n=input("Enter how many columns: ");
 A=zeros(1,n);
 B=zeros(1,n);
     for i=1:1:n
@@ -16,13 +17,12 @@ B=zeros(1,n);
 
     end
     for i=1:1:n
-        b=input("input in values for second array in order :");
+        b=input("input in values for second array in order: ");
         B(1,i)=b;
     end
 
 
-end
-
+end 
 function [C]=dotproduct(A,B)
   % This function finds the dot product of A . B
     C=dot(A,B);

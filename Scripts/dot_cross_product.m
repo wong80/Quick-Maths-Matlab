@@ -24,9 +24,11 @@ B=zeros(1,n);
 end
 
 function [C]=dotproduct(A,B)
+  % This function finds the dot product of A . B
     C=dot(A,B);
 end
 
 function [D]=crossproduct(A,B)
+  % This function finds the cross product of A x B
     D=cross(A,B);
 end

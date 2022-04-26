@@ -8,7 +8,6 @@ total_field=0;
 n =input("How many electric charges are there?: ");
 %declaration of arrays
 Q=zeros(1,n); %Value of charge
-r=zeros(1,n); %distance between charge and position
 vector=zeros(n,3); %relative vector position
 target=zeros(1,n);%target position
 magnitude=zeros(1,n); %Magnitude
@@ -45,9 +44,8 @@ for i=1:1:n
         square=(corrected_vector(i,j))^2;
         total=total+square;
     end
-    magnitude=sqrt(total);
-    magnitude(i)=magnitude;
-    r(i)=magnitude;
+    mag=sqrt(total);
+    magnitude(i)=mag;
 end
 
 %Calculating the unit vector
@@ -59,7 +57,7 @@ end
 
 %Calculating the electric field
 for i=1:1:n
-    electric_field= k*Q(i)/((r(i).^2)*unit_vector(1,n));
+    electric_field= k*Q(i)/((magnitude(i).^2)*unit_vector(1,n));
     total_field=total_field+electric_field;
 end
 

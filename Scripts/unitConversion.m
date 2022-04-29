@@ -5,7 +5,8 @@ uc.hptoW = @hptoW;
 uc.Wtohp = @Wtohp;
 uc.RevmtoRads= @RevmtoRads;
 uc.RadstoRevm= @RadstoRevm;
-
+uc.dBp=@dBp;
+uc.dBv=@dBv;
 end
 
 %horsepower to watts
@@ -27,4 +28,15 @@ end
 %Radians per seconds to Revolutions per minute
 function d=RadstoRevm(value)
     d=value*30/pi;
+end
+
+%decibles for power
+function e=dBp(value1,value2)
+
+    e=10*log10(value1/value2);
+end
+
+%decibel for voltage/current
+function f=dBv(value1,value2)
+    f=20*log10(value1/value2);
 end
